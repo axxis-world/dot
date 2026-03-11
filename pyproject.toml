@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "dot-protocol"
+version = "1.0.0"
+description = "DOT — a 151-byte signed observation format. Ed25519 + BLAKE3 chain. Public domain."
+readme = "README.md"
+license = { text = "Public Domain (CC0 1.0)" }
+requires-python = ">=3.9"
+keywords = [
+    "cryptography",
+    "ed25519",
+    "blake3",
+    "observation",
+    "chain",
+    "signed",
+    "protocol",
+    "dot",
+    "axxis",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security :: Cryptography",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = [
+    "pynacl>=1.5.0",
+    "blake3>=0.3.4",
+]
+
+[project.urls]
+Homepage = "https://axxis.world"
+Repository = "https://github.com/axxis-world/dot"
+"The Room" = "https://axxis.world/room"
+"The Paper" = "https://github.com/axxis-world/dot#observation-is-all-you-need"
+
+[project.scripts]
+dot = "dot_cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dot*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.md", "*.txt", "*.hex", "*.dot"]
