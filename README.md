@@ -1,3 +1,7 @@
+> **📦 Moved.** This now lives in **[`dot/bindings/python/`](https://github.com/dot-protocol/dot)** — folded into the `dot` monorepo (full history preserved) in the 2026-07 consolidation. This repo is kept as a pointer; new work happens in `dot`.
+
+---
+
 # Observation Is All You Need
 
 ### A transmission from the Room of Requirement
